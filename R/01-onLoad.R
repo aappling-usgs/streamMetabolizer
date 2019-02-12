@@ -33,9 +33,9 @@
     packageStartupMessage("Can't check GRAN for new package versions just now. We'll try again next time.")
   })
   
-  # Check whether this package is up to date on GitHub
+  # Check whether this package is up to date with most recent GitHub release
   github_owner <- 'USGS-R'
-  github_branch <- 'develop'
+  github_branch <- 'master'
   github_pkg_ref <- paste0(github_owner,'/',pkgname,'@',github_branch)
   github_update_code <- paste0(
     '  devtools::install_github("',github_pkg_ref,'")')
